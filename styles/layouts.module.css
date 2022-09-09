@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  border: 2px dashed rgba(114, 186, 94, 0.35);
+  height: 400px;
+  background: rgba(114, 186, 94, 0.05);
+}
+
+.shark1 {
+  position: sticky;
+  top: 0;
+}
+
+.shark2 {
+  position: sticky;
+  top: 4rem;
+}
+
+.shark3 {
+  position: sticky;
+  bottom: 1rem;
+  align-self: flex-end;
+}
+
+.test {
+  background: yellowgreen;
+  background-color: brown;
+}
