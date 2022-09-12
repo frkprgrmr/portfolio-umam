@@ -1,10 +1,10 @@
 import React from 'react'
 import { VStack } from '@chakra-ui/react'
-import About from './about'
-import Skills from './skills'
-import Experience from './experience'
-import Contact from './contact'
-import Intro from './intro'
+import About from '../components/content/about'
+import Skills from '../components/content/skills'
+import Experience from '../components/content/experience'
+import Contact from '../components/content/contact'
+import Intro from '../components/content/intro'
 
 type Props = {}
 

@@ -7,7 +7,7 @@ import {
   chakra,
 } from '@chakra-ui/react'
 import React from 'react'
-import TerminalBox from '../../components/components/TerminalBox/TerminalBox'
+import TerminalBox from '../../components/TerminalBox/TerminalBox'
 import { experience, ExperienceDataProps } from './experience'
 
 type ExperienceProps = {}
