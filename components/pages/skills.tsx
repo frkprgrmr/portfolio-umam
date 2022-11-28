@@ -9,12 +9,47 @@ import {
   Link,
   chakra,
 } from '@chakra-ui/react'
-import { skills } from './skills'
+import { SiTypescript, SiChakraui, SiPython, SiNx } from 'react-icons/si'
+import { TbBrandNextjs } from 'react-icons/tb'
+import { FaReact } from 'react-icons/fa'
 import React from 'react'
 
 type SkillsProps = {}
 
-const Skills = (props: SkillsProps) => {
+export const Skills = (props: SkillsProps) => {
+  const skills = [
+    {
+      icon: SiTypescript,
+      label: 'Typescript',
+      url: 'https://www.typescriptlang.org/',
+    },
+    {
+      icon: SiPython,
+      label: 'Python',
+      url: 'https://www.python.org/',
+    },
+    {
+      icon: FaReact,
+      label: 'React',
+      url: 'https://reactjs.org/',
+    },
+    {
+      icon: TbBrandNextjs,
+      label: 'NextJs',
+      url: 'https://nextjs.org/',
+    },
+    {
+      icon: SiNx,
+      label: 'NX',
+      url: 'https://nx.dev/',
+    },
+    {
+      icon: SiChakraui,
+      label: 'Chakra-Ui',
+      url: 'https://chakra-ui.com/',
+    },
+  ]
+
   return (
     <chakra.div id='skills'>
       <Center w='full' h='200px'>
@@ -41,5 +76,3 @@ const Skills = (props: SkillsProps) => {
     </chakra.div>
   )
 }
-
-export default Skills

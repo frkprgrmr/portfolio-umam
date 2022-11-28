@@ -17,13 +17,11 @@ type TopbarProps = {}
 
 const Topbar = (props: TopbarProps) => {
   const { colorMode, toggleColorMode } = useColorMode()
-  console.log('colorMode', colorMode)
-
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
     <Box
-      pos='fixed'
+      // pos='fixed'
       h='70px'
       w='full'
       backdropFilter='auto'
@@ -34,7 +32,7 @@ const Topbar = (props: TopbarProps) => {
         h={16}
         alignItems={'center'}
         justifyContent={'space-between'}
-        mx={{ md: '80px', base: 'unset' }}
+        // mx={{ md: '80px', base: 'unset' }}
       >
         <Button
           onClick={isOpen ? onClose : onOpen}
@@ -48,7 +46,7 @@ const Topbar = (props: TopbarProps) => {
         </Button>
         <Box
           as={Link}
-          ml={{ md: 'unset', base: '3' }}
+          ml={{ md: '3', base: '3' }}
           href='/#intro'
           _hover={{
             color: '#64ffda',

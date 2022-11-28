@@ -11,10 +11,10 @@ import React from 'react'
 
 type ContactProps = {}
 
-const Contact = (props: ContactProps) => {
+export const Contact = (props: ContactProps) => {
   return (
     <chakra.div id='contact'>
-      <Center w='full' h='200px'>
+      <Box w='full'>
         <VStack>
           <Heading fontSize='4xl'>Get In Touch !</Heading>
           <Text fontSize='lg'>
@@ -33,9 +33,7 @@ const Contact = (props: ContactProps) => {
             Say Hello!
           </Box>
         </VStack>
-      </Center>
+      </Box>
     </chakra.div>
   )
 }
-
-export default Contact

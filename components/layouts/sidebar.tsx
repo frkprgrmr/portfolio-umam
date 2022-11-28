@@ -1,4 +1,13 @@
-import { Box, Center, HStack, Link, Stack, Text } from '@chakra-ui/react'
+import {
+  Box,
+  Center,
+  Flex,
+  HStack,
+  Link,
+  Spacer,
+  Stack,
+  Text,
+} from '@chakra-ui/react'
 import React from 'react'
 import { SocialMediaItem } from '../components/social-media-items'
 import SocialMedia from '../components/social-media'
@@ -7,7 +16,7 @@ type SidebarProps = {}
 
 const Sidebar = (props: SidebarProps) => {
   return (
-    <>
+    <Flex>
       <Box
         id='sidebar-left'
         position='fixed'
@@ -25,6 +34,7 @@ const Sidebar = (props: SidebarProps) => {
           </Center>
         </Stack>
       </Box>
+      <Spacer />
       <Box
         id='sidebar-right'
         position='fixed'
@@ -54,7 +64,7 @@ const Sidebar = (props: SidebarProps) => {
           </Center>
         </HStack>
       </Box>
-    </>
+    </Flex>
   )
 }
 

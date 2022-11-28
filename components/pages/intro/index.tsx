@@ -15,18 +15,17 @@ import ProgressBar from './progress-bar'
 
 type IntroProps = {}
 
-const Intro = (props: IntroProps) => {
+export function Intro(props: IntroProps) {
   return (
     <chakra.div id='intro'>
       <Center pt='12'>
-        <Stack w='3xl' direction={{ base: 'column', md: 'row' }} padding={4}>
+        <Stack w='full' direction={{ base: 'column', md: 'row' }} padding={4}>
           <Flex flex={1} alignSelf='center'>
             <Box
               as={Image}
               src='./me.jpeg'
               als='Khoerul Umam'
-              width={{ md: '40vh', base: 'unset' }}
-              height='40vh'
+              width={{ md: '40vh', base: '50vh' }}
               borderRadius='50%'
               p='0.75rem'
               bgGradient='linear(to-r, #64ffda, teal.600)'
@@ -49,19 +48,17 @@ const Intro = (props: IntroProps) => {
             <Text fontWeight={600} fontSize='2xl' textAlign='center'>
               I&apos;m a Front End Developer
             </Text>
-            <Wrap
-              pt='6'
-              alignSelf='center'
-              w={{ lg: 'full', md: 'full', base: 'lg' }}
-            >
-              {Umam.map((val: { label: string; value: number }) => (
-                <>
-                  <Box w={{ lg: 'full', md: 'full', base: 'lg' }}>
-                    <Text>{val.label}</Text>
-                    <ProgressBar value={val.value} />
-                  </Box>
-                </>
-              ))}
+            <Wrap pt='6' alignSelf='center' w='full'>
+              <Stack direction='column' spacing='2' w='full'>
+                {Umam.map((val: { label: string; value: number }) => (
+                  <>
+                    <Box>
+                      <Text>{val.label}</Text>
+                      <ProgressBar value={val.value} />
+                    </Box>
+                  </>
+                ))}
+              </Stack>
             </Wrap>
           </Stack>
         </Stack>
@@ -69,5 +66,3 @@ const Intro = (props: IntroProps) => {
     </chakra.div>
   )
 }
-
-export default Intro

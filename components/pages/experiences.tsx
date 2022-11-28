@@ -5,22 +5,50 @@ import {
   UnorderedList,
   ListItem,
   chakra,
+  Stack,
 } from '@chakra-ui/react'
 import React from 'react'
-import TerminalBox from '../../components/TerminalBox/TerminalBox'
-import { experience, ExperienceDataProps } from './experience'
+import TerminalBox from '../../components/components/TerminalBox/TerminalBox'
 
-type ExperienceProps = {}
+type Experiencesrops = {}
 
-const Experience = (props: ExperienceProps) => {
+export function Experiences(props: Experiencesrops) {
+  const experience = [
+    {
+      company: 'Zero one Group',
+      desciption:
+        'Digital Marketing, Social Media Management, ERP and Software Development, Technical due Diligence, and Artificial Intelligent Systems.',
+      position: 'Product Engineer',
+      date: 'October 2020 - Now',
+      jobdesk: [
+        'Frontend Web Developer With ReactJS',
+        'Write Unit Test',
+        'Integrate Endpoint',
+        'Create backend stuff using NodeJS if needed',
+      ],
+    },
+    {
+      company: 'PT. Artysys Integrasi Solusindo',
+      desciption: 'Odoo Consultant, Implementer, and Developer Specialis.',
+      position: 'Technical Engineer',
+      date: 'Maret 2017 – September 2020',
+      jobdesk: [
+        'Technical Development Odoo ERP Manufacture, HR, and API BCA.',
+        'Preparing the server for Odoo production and development',
+        'Presentations to prospective clients with functional leads, if needed',
+        'Analyze needs with Functional leads If there are new projects',
+        'Conduct weekly meetings for all technical development teams related to obstacles in developing odoo and solving solutions',
+      ],
+    },
+  ]
   return (
     <chakra.div id='experience'>
-      <Box px={{ lg: '40', md: '4', base: '4' }}>
+      <Stack direction='column' w='full' align='center'>
         <Heading fontSize='4xl' textAlign='center' mb='6'>
           Experience
         </Heading>
         <Box>
-          <TerminalBox boxShadow='2xl' w={{ lg: '4xl', base: '2xl' }}>
+          <TerminalBox shadow='lg' w='full'>
             <Text as={'span'} color='#82DBD8'>
               ➜ khoerulumam $
             </Text>
@@ -31,7 +59,7 @@ const Experience = (props: ExperienceProps) => {
             </Text>
             <Text as={'span'}> ls</Text>
             <br />
-            {experience.map((val: ExperienceDataProps) => (
+            {experience.map((val) => (
               <>
                 <Text color='green.300' fontWeight='semibold' pt='4'>
                   {val.company}
@@ -56,9 +84,7 @@ const Experience = (props: ExperienceProps) => {
             ))}
           </TerminalBox>
         </Box>
-      </Box>
+      </Stack>
     </chakra.div>
   )
 }
-
-export default Experience

@@ -8,7 +8,7 @@ interface TerminalBoxProps extends BoxProps {
 
 const TerminalBox = ({ children, ...props }: TerminalBoxProps) => {
   return (
-    <Box as='section' minW='500px' minH='300px' {...props}>
+    <Box as='section' {...props}>
       <Box
         bg={useColorModeValue('#6c757d', '#8FE3CF')}
         p={'0.5rem'}
